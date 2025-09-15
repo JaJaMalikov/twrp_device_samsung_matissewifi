@@ -22,6 +22,7 @@ jobs:
           mkdir -p .repo/local_manifests
           echo '<?xml version="1.0" encoding="UTF-8"?>' > .repo/local_manifests/local_manifest.xml
           echo '<manifest>' >> .repo/local_manifests/local_manifest.xml
+          echo '  <remove-project name="android_prebuilts_misc" />' >> .repo/local_manifests/local_manifest.xml
           echo '  <project name="LineageOS/android_prebuilts_misc" path="prebuilts/misc" remote="github" revision="cm-14.1" />' >> .repo/local_manifests/local_manifest.xml
           echo '  <project name="NotNoelChannel/twrp_device_samsung_matissewifi" path="device/samsung/matissewifi" remote="github" revision="twrp-6.0" />' >> .repo/local_manifests/local_manifest.xml
           echo '  <project name="matteo0026/android_kernel_samsung_msm8226" path="kernel/samsung/msm8226" remote="github" revision="android-7.1" />' >> .repo/local_manifests/local_manifest.xml
