@@ -16,4 +16,4 @@
 
 LOCAL_PATH := device/samsung/matissewifi
 
-PRODUCT_MAKEFILES := $(LOCAL_PATH)omni_matissewifi.mk
+PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_matissewifi.mk
