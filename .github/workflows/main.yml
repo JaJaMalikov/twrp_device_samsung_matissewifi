@@ -35,8 +35,8 @@ jobs:
         run: |
           OLDPATH=$PATH
           OLDJAVAHOME=$JAVA_HOME
-          export PATH="$HOME/.jdk_7/java-se-7u75-ri/bin:$PATH"
-          export JAVA_HOME="$HOME/.jdk_7/java-se-7u75-ri"
+          export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+          export PATH="$JAVA_HOME/bin:$PATH"
           cd ~/OFRP
           source build/envsetup.sh
           export ALLOW_MISSING_DEPENDENCIES=true
