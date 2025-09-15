@@ -1,0 +1,19 @@
+2025-09-15T20:20:17.0099642Z ##[group]Run OLDPATH=$PATH
+2025-09-15T20:20:17.0099912Z [36;1mOLDPATH=$PATH[0m
+2025-09-15T20:20:17.0100110Z [36;1mOLDJAVAHOME=$JAVA_HOME[0m
+2025-09-15T20:20:17.0100394Z [36;1mexport PATH="$HOME/.jdk_7/java-se-7u75-ri/bin:$PATH"[0m
+2025-09-15T20:20:17.0100733Z [36;1mexport JAVA_HOME="$HOME/.jdk_7/java-se-7u75-ri"[0m
+2025-09-15T20:20:17.0100997Z [36;1mcd ~/OFRP[0m
+2025-09-15T20:20:17.0101191Z [36;1msource build/envsetup.sh[0m
+2025-09-15T20:20:17.0101441Z [36;1mexport ALLOW_MISSING_DEPENDENCIES=true[0m
+2025-09-15T20:20:17.0101702Z [36;1mexport LC_ALL="C"[0m
+2025-09-15T20:20:17.0101993Z [36;1mexport CROSS_COMPILE=/opt/toolchains/arm-eabi-4.8/bin/arm-eabi-[0m
+2025-09-15T20:20:17.0102329Z [36;1mlunch omni_matissewifi-eng[0m
+2025-09-15T20:20:17.0102594Z [36;1mmake -j$(nproc --all) recoveryimage[0m
+2025-09-15T20:20:17.0102855Z [36;1mexport PATH=$OLDPATH[0m
+2025-09-15T20:20:17.0103070Z [36;1mexport JAVA_HOME=$OLDJAVAHOME[0m
+2025-09-15T20:20:17.0132459Z shell: /usr/bin/bash -e {0}
+2025-09-15T20:20:17.0132680Z ##[endgroup]
+2025-09-15T20:20:17.0282968Z including device/matissewifi/vendorsetup.sh
+2025-09-15T20:20:17.1164759Z build/core/product_config.mk:239: *** _nic.PRODUCTS.[[device/samsung/matissewifi//omni_matissewifi.mk]]: "device/samsung/matissewifi//omni_matissewifi.mk" does not exist.  Stop.
+2025-09-15T20:20:17.1180705Z ##[error]Process completed with exit code 2.

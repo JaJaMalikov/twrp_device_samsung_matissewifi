@@ -28,8 +28,6 @@ jobs:
           echo '  <project name="matteo0026/android_kernel_samsung_msm8226" path="kernel/samsung/msm8226" remote="github" revision="android-7.1" />' >> .repo/local_manifests/local_manifest.xml
           echo '</manifest>' >> .repo/local_manifests/local_manifest.xml
           python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
-          rm -rf prebuilts/misc
-          git clone https://github.com/LineageOS/android_prebuilts_misc.git -b cm-14.1 prebuilts/misc
           git clone --depth=1 --branch android-6.0.1_r32 --single-branch https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 /opt/toolchains/arm-eabi-4.8
       - name: Building TWRP
         run: |
