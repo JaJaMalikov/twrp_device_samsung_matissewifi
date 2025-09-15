@@ -85,6 +85,3 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_matisse
 TARGET_RECOVERY_DEVICE_MODULES := libinit_matisse
 TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_TREE)/init/init_matisse.cpp
-
-# Use custom dtbtool
-TARGET_CUSTOM_DTBTOOL := dtbTool

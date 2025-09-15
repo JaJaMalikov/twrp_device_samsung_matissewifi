@@ -16,7 +16,7 @@
 
 ifneq ($(filter matissewifi,$(TARGET_DEVICE)),)
 
-LOCAL_PATH := device/samsung/matissewifi
+LOCAL_PATH := $(call my-dir)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
