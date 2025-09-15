@@ -10,11 +10,7 @@ jobs:
       - name: Installing build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install gperf gcc-multilib gcc-10-multilib g++-multilib g++-10-multilib libc6-dev lib32ncurses5-dev x11proto-core-dev libx11-dev tree lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc bc ccache lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk3.0-gtk3-dev libxml2 lzop pngcrush schedtool squashfs-tools imagemagick libbz2-dev lzma ncftp qemu-user-static libstdc++-10-dev libncurses5 python2.7 axel
-          mkdir ~/.jdk_7
-          cd ~/.jdk_7
-          axel -q -n $(nproc --all) https://download.java.net/openjdk/jdk7u75/ri/openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz
-          tar -xzf openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz
+          sudo apt-get install gperf gcc-multilib gcc-10-multilib g++-multilib g++-10-multilib libc6-dev lib32ncurses5-dev x11proto-core-dev libx11-dev tree lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc bc ccache lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk3.0-gtk3-dev libxml2 lzop pngcrush schedtool squashfs-tools imagemagick libbz2-dev lzma ncftp qemu-user-static libstdc++-10-dev libncurses5 python2.7 openjdk-8-jdk          
           sudo ln -f -s /usr/bin/python2.7 /usr/bin/python
       - name: Syncing TWRP sources
         run: |
@@ -31,8 +27,8 @@ jobs:
         run: |
           OLDPATH=$PATH
           OLDJAVAHOME=$JAVA_HOME
-          export PATH="$HOME/.jdk_7/java-se-7u75-ri/bin:$PATH"
-          export JAVA_HOME="$HOME/.jdk_7/java-se-7u75-ri"
+          export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+          export PATH="$JAVA_HOME/bin:$PATH"
           cd ~/OFRP
           source build/envsetup.sh
           export ALLOW_MISSING_DEPENDENCIES=true
