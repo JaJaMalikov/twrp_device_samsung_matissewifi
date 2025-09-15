@@ -23,6 +23,7 @@ jobs:
           git clone --depth=1 --branch twrp-6.0 --single-branch https://github.com/NotNoelChannel/twrp_device_samsung_matissewifi device/samsung/matissewifi
           git clone --depth=1 --branch android-6.0.1_r32 --single-branch https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 /opt/toolchains/arm-eabi-4.8
           git clone --depth=1 --branch android-7.1 --single-branch https://github.com/matteo0026/android_kernel_samsung_msm8226.git kernel/samsung/msm8226
+          git clone https://github.com/LineageOS/android_prebuilts_misc.git -b cm-14.1 prebuilts/misc
       - name: Building TWRP
         run: |
           OLDPATH=$PATH
